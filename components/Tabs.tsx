@@ -13,7 +13,7 @@ const StyledTabs = styled.div`
   margin-bottom: 20px;
 `;
 
-const StyleTab = styled.span`
+const StyleTab = styled.span<any>`
   font-size: 1.5rem;
   cursor: pointer;
   ${(props) =>
@@ -29,8 +29,9 @@ const StyleTab = styled.span`
 const Tabs = ({ tabs, activeTab, onTabClick }: TabsProps) => {
   return (
     <StyledTabs>
-      {tabs.map((tabName) => (
+      {tabs.map((tabName, i) => (
         <StyleTab
+          key={i}
           active={activeTab === tabName}
           onClick={() => onTabClick(tabName)}
         >

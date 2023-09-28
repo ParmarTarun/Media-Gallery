@@ -9,8 +9,8 @@ const SingleOrder = ({ cartItems, createdAt }: OrderLineProps) => {
   return (
     <div>
       <time>{createdAt}</time>
-      {cartItems.map((item: any) => (
-        <p>{item.price_data.product_data.name}</p>
+      {cartItems.map((item: any, i: string) => (
+        <p key={i}>{item.price_data.product_data.name}</p>
       ))}
     </div>
   );
