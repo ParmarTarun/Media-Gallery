@@ -80,7 +80,7 @@ const Featured = ({ product }: featuredProps) => {
             <div>
               <RevealWrapper origin="left">
                 <Title>{product.title}</Title>
-                <Desc>{product.description}</Desc>
+                <Desc>{product.description.slice(0, 150)}...</Desc>
                 <ButtonsWrapper>
                   <ButtonLink
                     href={"/product/" + product._id}

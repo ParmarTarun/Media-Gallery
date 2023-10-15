@@ -34,7 +34,7 @@ const HomePage = ({
 export const getServerSideProps: GetServerSideProps<homePageProps> = async (
   ctx
 ) => {
-  const featuredId = "6507629d1135dd1af98c54b1";
+  const featuredId = "651d7afe0bac064edaf90a0e";
   await mongooseConnect();
   const featuredProduct = await Product.findById(featuredId);
   const newProducts = await Product.find({}, null, { sort: { _id: -1 } });
