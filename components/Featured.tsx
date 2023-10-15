@@ -103,7 +103,7 @@ const Featured = ({ product }: featuredProps) => {
           </Column>
           <Column>
             <RevealWrapper>
-              <img src={product.images?.[0] || "mac.png"} alt="" />
+              <img src={product.images?.[0]} alt="" />
             </RevealWrapper>
           </Column>
         </ColumnsWrapper>
